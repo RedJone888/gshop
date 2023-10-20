@@ -53,10 +53,12 @@ export default {
   },
   watch:{
     searchShops(value){
-      if(value.length){
+      // if(!value.length){
+      if(!value.message){
+        this.noSearchShops=true
+      }else{
         this.noSearchShops=false
       }
-      this.noSearchShops=true
     }
   }
 };
